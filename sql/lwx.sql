@@ -1,0 +1,22 @@
+DROP DATABASE IF EXISTS db_1702;
+CREATE DATABASE db_1702;
+DROP TABLE IF EXISTS db_1702.student;
+CREATE TABLE db_1702.student(
+id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'ID PK',
+name VARCHAR(255) COMMENT '姓名',
+gender CHAR(2) COMMENT '性别',
+age INT COMMENT '年龄'
+);
+SHOW FULL
+COLUMNS FROM db_1702.student;
+INSERT INTO db_1702.student VALUES (NULL ,'Tom','男',18);
+SELECT *
+FROM db_1702.student;
+
+INSERT INTO db_1702.student
+    VALUES (NULL,'002','tester','I\'m...','f',19,1.7,12.34,'1998-1-2','2017-5-18 22:19');
+INSERT INTO db_1702.student(name)
+VALUES('Tom');
+
+
+-- SHOW CREATE TABLE db_1702.student; -- 显示建表语句
